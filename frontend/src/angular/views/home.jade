@@ -1,0 +1,36 @@
+
+.jumbotron
+	h1 MINT-Orte in Leipzig
+	p.lead
+		| Diese Website dient als Gesamtübersicht über die Bildungsangebote in den Bereichen Mathematik, Informatik, Naturwissenschaften und Technik (MINT) sowie Umweltbildung in Leipzig.
+	p
+		a.btn.btn-lg.btn-success(href='#/search', role='button') Suche starten
+
+.panel.panel-default(ng-show="baseData.length")
+	.panel-body
+		|  Derzeit kannst du {{baseData.length}} MINT-Orte durchsuchen.
+//--	
+	#myCarousel.carousel.slide(data-ride1='carousel1')
+		// Indicators
+		ol.carousel-indicators
+			li.active(data-target='#myCarousel', data-slide-to='0')
+			li(data-target='#myCarousel', data-slide-to='1')
+			li(data-target='#myCarousel', data-slide-to='2')
+			li(data-target='#myCarousel', data-slide-to='3')
+		// Wrapper for slides
+		.carousel-inner(role='listbox')
+			.item.active
+				img(src='logos/1.png', alt='Chania')
+			.item
+				img(src='logos/2.png', alt='Chania')
+			.item
+				img(src='logos/3.png', alt='Flower')
+			.item
+				img(src='logos/4.png', alt='Flower')
+		// Left and right controls
+		a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+			span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+			span.sr-only Previous
+		a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+			span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+			span.sr-only Next

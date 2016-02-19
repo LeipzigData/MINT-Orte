@@ -1,0 +1,99 @@
+.row
+	.col-xs-12
+		.input-group.input-group-sm
+			span#sizing-addon3.input-group-addon
+				i.fa.fa-search
+				|   
+			input.form-control(type='text', placeholder='Suchbegriff eingeben...', ng-model="option.searchString" aria-describedby='sizing-addon3')
+.row(style="padding-top: 15px;padding-bottom:15px; text-align: center;")
+	.col-xs-2(style="margin-bottom: 5px;")
+		a(ng-click="option.job = !option.job" ng-class="{'colorless':(!(option.all||option.job))}")
+			img(src="img/berufsorientierung.png" tooltip-append-to-body="true" uib-tooltip="Berufsorientierung" height="50px" width="50px")
+	.col-xs-2
+		a(ng-click="option.computer = !option.computer" ng-class="{'colorless':(!(option.all||option.computer))}")
+			img(src="img/informatik.png" tooltip-append-to-body="true" uib-tooltip="Informatik" height="50px" width="50px")
+	.col-xs-2
+		a(ng-click="option.math = !option.math" ng-class="{'colorless':(!(option.all||option.math))}")
+			img(src="img/mathe.png" tooltip-append-to-body="true" uib-tooltip="Mathe" height="50px" width="50px")
+	.col-xs-2
+		a(ng-click="option.nature = !option.nature" ng-class="{'colorless':(!(option.all||option.nature))}")
+			img(src="img/naturwissenschaften.png" tooltip-append-to-body="true" uib-tooltip="Naturwissenschaften" height="50px" width="50px")
+	.col-xs-2
+		a(ng-click="option.tech = !option.tech" ng-class="{'colorless':(!(option.all||option.tech))}")
+			img(src="img/technik.png" tooltip-append-to-body="true" uib-tooltip="Technik" height="50px" width="50px")
+	.col-xs-2
+		a(ng-click="option.environment = ! option.environment" ng-class="{'colorless':(!(option.all||option.environment))}")
+			img(src="img/umweltbildung.png" tooltip-append-to-body="true" uib-tooltip="Umweltbildung" height="50px" width="50px")
+
+.row(style="margin-bottom: 10px;")
+	.col-xs-4
+		.btn-group
+			button.btn.btn-primary.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+				i.fa.fa-wheelchair
+				|   
+				//--| Behindertengerecht   
+				span(ng-show="option.handicappedSuited == 0") alles 
+				span(ng-show="option.handicappedSuited == 2" uib-tooltip="Orte mit Behindertengerechtem Zugang") nur Behindertengerecht  
+				span(ng-show="option.handicappedSuited == 1" uib-tooltip="Orte mit Eingeschränkt oder Behindertengerechtem Zugang") Eing. Behindertengerecht 
+				span.caret
+			ul.dropdown-menu
+				li: a(href="" ng-click="option.handicappedSuited = 0") 
+					i.fa.fa-check(ng-show="option.handicappedSuited == 0")
+					|  alles anzeigen
+				li: a(href="" ng-click="option.handicappedSuited = 2") 
+					i.fa.fa-check(ng-show="option.handicappedSuited == 2")
+					|  Behindertengerechter Zugang
+				li: a(href="" ng-click="option.handicappedSuited = 1") 
+					i.fa.fa-check(ng-show="option.handicappedSuited == 1")
+					|  Eingeschränkt Behindertengerechter Zugang
+	.col-xs-4
+		.btn-group
+			button.btn.btn-primary.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+				| Ortsteile:   
+				span(ng-show="option.stadtteile.length==0") alle    
+				span(ng-hide="option.stadtteile.length==0") {{option.stadtteile.length}}   
+				span.caret
+			ul.dropdown-menu
+				li(ng-repeat="(key1,teil) in stadtteile track by key1")
+					a(href="" ng-click="toggleStadtteil(teil)") 
+						i.fa.fa-check(ng-show="option.stadtteile.indexOf(teil)>=0")
+						|  {{teil}} 
+						span.pull-right ({{stadtteileCount[teil]}})
+				
+	.col-xs-4
+		.input-group
+			span.input-group-addon
+				input(type="checkbox" aria-label="..." ng-model="option.gta")
+			.form-control Ganztagesangebot
+.row(style="margin-bottom: 10px;")
+	.col-xs-12
+		span Anzeige: {{filteredData.length}} von  {{data.length}} MINT-Orte  
+		a.pull-right.btn.btn-default.btn-xs(ng-disabled="filteredData.length == data.length" ng-click="resetFilter()") Filter zurücksetzten
+uib-tabset
+	uib-tab(heading="Listenansicht" select="select('list')")
+		.row(style="margin-top:15px; margin-bottom: 20px;")
+			.col-md-4(ng-repeat="element in filteredData track by element.id ")
+				.thumbnail( style="height: 245px;")
+					img(ng-src="{{element.hasLogo?'img/logos/'+element.hasLogo:(element.hasImage?'img/placeImages/'+element.hasImage:'')}}" style="max-height: 100px;")
+					.caption
+						h5( style="height: 45px;" ng-bind="element._label.length>50?(element._label.substr(0,50)+'...'):element._label")
+						p( ng-pluralize count="element.hasAngebote.length || 0" when="{'0': 'keine Angebote','one': 'ein Angebot','other': '{} Angebote'}")
+						a.btn.btn-default.btn-xs.btn-block(ng-href="#/p/{{element._shortId}}") Mehr Infos
+	uib-tab(heading="Kartenansicht" select="select('map')")
+		.row(style="margin-top:15px; margin-bottom: 20px;" ng-if="mapOpened")
+			.col-xs-12
+				ng-map(zoom="12" center="{{center}}" style="height:600px" )
+					marker(ng-repeat="(key3,marker) in markers track by marker.id" position="{{marker.lat ? marker.lat+','+marker.long:marker.address}}" on-click="showMarker(marker)")
+					
+					custom-marker(id="overview" position="10,10" style="background: #eee;")
+						div(style="background: #fff; padding: 10px; margin-bottom: 30px;")
+							a(href=""): i.fa.fa-close.pull-right(ng-click="hideMarker()")
+							table(style=" min-width: 300px max-width: 600px;" ): tbody
+								tr(ng-repeat="place in currentMarker.places" style="padding-top:5px; padding-bottom:5px;" ng-style="{ 'border-bottom': $last ? 'none':'#eee thin solid' }")
+									td(style=" text-align:center;") 
+										img(ng-src="{{place.hasLogo?'img/logos/'+place.hasLogo:place.hasImage?'img/placeImages/'+place.hasImage:''}}" style="max-height: 60px;")
+									td(style="    vertical-align: top; padding-left: 10px; padding-top:5px; padding-bottom:5px;")
+										
+										h5( style="height: 45px;" ng-bind="place.name.length>50?(place.name.substr(0,50)+'...'):place.name")
+										a.btn.btn-default.btn-xs.btn-block(ng-href="#/p/{{place._shortId}}") Mehr Infos
+						

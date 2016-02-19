@@ -1,0 +1,125 @@
+.col-xs-12
+	h2 {{place._label}}
+.col-sm-8(style="text-align:center;")
+	img.responsive(style="width:100%" ng-src="img/placeImages/{{place.hasImage}}" ng-if="place.hasImage")
+	img.responsive(ng-src="img/logos/{{place.hasLogo}}" ng-if="!place.hasImage")
+.col-sm-4
+	img(ng-show="place.hasTagIds.indexOf('Berufsorientierung') > -1" src="img/berufsorientierung.png" tooltip-append-to-body="true" uib-tooltip="Berufsorientierung" height="50px" width="50px")
+	img(ng-show="place.hasTagIds.indexOf('Informatik') > -1" src="img/informatik.png" tooltip-append-to-body="true" uib-tooltip="Informatik" height="50px" width="50px")
+	img(ng-show="place.hasTagIds.indexOf('Mathematik') > -1" src="img/mathe.png" tooltip-append-to-body="true" uib-tooltip="Mathe" height="50px" width="50px")
+	img(ng-show="place.hasTagIds.indexOf('Naturwissenschaft') > -1" src="img/naturwissenschaften.png" tooltip-append-to-body="true" uib-tooltip="Naturwissenschaften" height="50px" width="50px")
+	img(ng-show="place.hasTagIds.indexOf('Technik') > -1" src="img/technik.png" tooltip-append-to-body="true" uib-tooltip="Technik" height="50px" width="50px")
+	img(ng-show="place.hasTagIds.indexOf('Umweltbildung') > -1" src="img/umweltbildung.png" tooltip-append-to-body="true" uib-tooltip="Umweltbildung" height="50px" width="50px")
+	img(ng-show="place.hasTagIds.indexOf('EinBehiGe') > -1" src="img/EinBehiGe.png" tooltip-append-to-body="true" uib-tooltip="Eingeschränkt Behindertengerechter Zugang" height="50px" width="50px")
+	img(ng-show="place.hasTagIds.indexOf('BehiGe') > -1" src="img/BehiGe.png" tooltip-append-to-body="true" uib-tooltip="Behindertengerechter Zugang" height="50px" width="50px")
+	img(ng-show="place.hasTagIds.indexOf('GTA') > -1" src="img/GTA.png" tooltip-append-to-body="true" uib-tooltip="Ganztagesangebot" height="50px" width="50px")
+	h4(ng-show="place.Ort.hasAddress._label") Adresse:
+	p(ng-show="place.Ort.hasAddress._label") {{place.Ort.hasAddress._label.substr(place.Ort.hasAddress._label.indexOf(',')+2)}}
+		br
+		|  {{place.Ort.hasAddress.hasPostCode}}
+		span(ng-show="place.Ort.hasAddress._label.indexOf(place.Ort.hasAddress.hasPostCode)>-1")
+			|  {{place.Ort.hasAddress._label.substring(place.Ort.hasAddress._label.indexOf(place.Ort.hasAddress.hasPostCode)+place.Ort.hasAddress.hasPostCode.length,place.Ort.hasAddress._label.indexOf(','))}} 
+		span(ng-hide="place.Ort.hasAddress._label.indexOf(place.Ort.hasAddress.hasPostCode)>-1") 
+			|  {{place.Ort.hasAddress._label.substr(0,place.Ort.hasAddress._label.indexOf(','))}} 
+		span(ng-show="place.Ort.hasAddress.stadtteil") ({{place.Ort.hasAddress.stadtteil}})
+	h4() Kontakt:
+	p
+		span(ng-show="place.Telefon")
+			i.fa.fa-phone(uib-tooltip="Telefon")
+			|  {{place.Telefon}}
+		br
+		span(ng-show="place.Fax")
+			i.fa.fa-fax(uib-tooltip="Fax")
+			|  {{place.Fax}}
+		br
+		span(ng-show="place.Mail")
+			i.fa.fa-at(uib-tooltip="Mail")
+			|  {{place.Mail}}
+		br
+		span(ng-repeat="internet in place.Internet")
+			i.fa.fa-globe(uib-tooltip="Internet")
+			a(ng-href="{{place.Internet.indexOf('http')>-1?internet : 'http://'+internet}}" target="_blank" uib-tooltip="öffnet neues Fenster/Tab")
+				|  {{internet}}
+			br(ng-if="$index+1 < place.Internet.length")
+.clearfix
+.col-xs-12(ng-show="place.Kurzinformation")
+	h4 Kurzinformation
+	p(ng-bind="place.Kurzinformation")
+.col-xs-12(ng-show="place.Leistungsangebot")
+	h4 Leistungsangebot
+	p(ng-bind="place.Leistungsangebot")
+.col-xs-12(ng-show="place['Öffnungszeiten'] || place['ÖPNV-Anbindung']")
+	h4 Erreichbarkeit:
+	p(ng-show="place['Öffnungszeiten']") Öffnungszeiten: {{place['Öffnungszeiten']}}
+	p(ng-show="place['ÖPNV-Anbindung']") ÖPNV-Anbindung: {{place['ÖPNV-Anbindung']}}
+.clearfix
+uib-tabset(justified="")
+	uib-tab(heading="Angebotsschwerpunkte und Zielgruppen" ng-show="place.hasSchwerpunkte" select="select('schwerpunkte')")
+		table.table.table-striped.table-bordered
+			thead: tr
+				th Angebotsspektrum nach Schwerpunkten
+				th Angebote besonders interessant für folgende Ziel- / Altersgruppen
+				th Kosten pro Teilnehmer/-in
+				th max. Teilnehmerzahl
+				th: img(src="img/GTA.png" tooltip-append-to-body="true" uib-tooltip="Ganztagesangebot" height="50px" width="50px")
+			tbody
+				tr(ng-repeat="schwerpunkt in place.hasSchwerpunkte")
+					td(ng-bind="schwerpunkt._label")
+					td(ng-bind="schwerpunkt.Zielgruppen")
+					td(ng-bind="schwerpunkt.Kosten")
+					td(ng-bind="schwerpunkt.Teilnehmerzahl")
+					td(ng-bind="schwerpunkt.GTA")
+				
+	uib-tab(heading="Ausgewählte Projektangebote" ng-show="place.hasAngebote" select="select('proj')")
+		
+		table.table.project-table(ng-repeat="angebot in place.hasAngebote")
+			thead
+				tr
+					th(style="width:200px;") Titel / Thema
+					th {{angebot._label}}
+						.pull-right
+							img(ng-show="angebot.hasTagIds.indexOf('Berufsorientierung') > -1" src="img/berufsorientierung.png" tooltip-append-to-body="true" uib-tooltip="Berufsorientierung" height="25px" width="25px")
+							img(ng-show="angebot.hasTagIds.indexOf('Informatik') > -1" src="img/informatik.png" tooltip-append-to-body="true" uib-tooltip="Informatik" height="25px" width="25px")
+							img(ng-show="angebot.hasTagIds.indexOf('Mathematik') > -1" src="img/mathe.png" tooltip-append-to-body="true" uib-tooltip="Mathe" height="25px" width="25px")
+							img(ng-show="angebot.hasTagIds.indexOf('Naturwissenschaft') > -1" src="img/naturwissenschaften.png" tooltip-append-to-body="true" uib-tooltip="Naturwissenschaften" height="25px" width="25px")
+							img(ng-show="angebot.hasTagIds.indexOf('Technik') > -1" src="img/technik.png" tooltip-append-to-body="true" uib-tooltip="Technik" height="25px" width="25px")
+							img(ng-show="angebot.hasTagIds.indexOf('Umweltbildung') > -1" src="img/umweltbildung.png" tooltip-append-to-body="true" uib-tooltip="Umweltbildung" height="25px" width="25px")
+							img(ng-show="angebot.hasTagIds.indexOf('EinBehiGe') > -1" src="img/EinBehiGe.png" tooltip-append-to-body="true" uib-tooltip="Eingeschränkt Behindertengerechter Zugang" height="25px" width="25px")
+							img(ng-show="angebot.hasTagIds.indexOf('BehiGe') > -1" src="img/BehiGe.png" tooltip-append-to-body="true" uib-tooltip="Behindertengerechter Zugang" height="25px" width="25px")
+							img(ng-show="angebot.hasTagIds.indexOf('GTA') > -1" src="img/GTA.png" tooltip-append-to-body="true" uib-tooltip="Ganztagesangebot" height="25px" width="25px")
+			tbody
+				tr
+					th Lernziele / Untersuchte Fragestellungen
+					td {{angebot.Lernziele}}
+				tr
+					th Zielgruppen
+					td {{angebot.Zielgruppen}}
+				tr
+					th Kosten / Eintritt
+					td {{angebot.Kosten}}
+				tr
+					th Veranstaltungsort
+					td {{angebot.Veranstaltungsort}}
+				tr
+					th Wichtige Hinweise
+					td {{angebot.Hinweise}}
+				tr
+					th Laufzeit des Angebots
+					td {{angebot.Laufzeit}}
+					
+	uib-tab(heading="Anfahrt" ng-show="place.Ort.hasAddress._label" select="select('map')")
+		.row: .col-xs-12(ng-if="mapOpened")
+			ng-map(zoom="16" center="{{center}}" style="height:400px" )
+				marker(position="{{place.Ort.hasAddress['wgs84_pos#lat'] ? place.Ort.hasAddress['wgs84_pos#lat']+','+place.Ort.hasAddress['wgs84_pos#long']:place.Ort.hasAddress._label}}" on-click="showMarker(marker)")
+				
+				custom-marker(id="overview" position="10,10" style="background: #eee; ")
+					div(style="background: #fff; padding: 10px; margin-bottom: 25px;")
+						table(style=" min-width: 300px max-width: 600px;"): tbody
+							tr
+								td 
+									img(ng-src="{{currentMarker.hasLogo?'img/logos/'+currentMarker.hasLogo:currentMarker.hasImage?'img/placeImages/'+currentMarker.hasImage:''}}" style="max-height: 100px;")
+								td(style="    vertical-align: top; padding-left: 10px;")
+									h5( style="height: 45px;" ng-bind="place._label.length>50?(place._label.substr(0,50)+'...'):place._label")
+//--
+	pre.
+		{{JSON.stringify(place,7,4)}}

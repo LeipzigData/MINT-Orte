@@ -1,0 +1,31 @@
+{
+  "name": "mint-15.frontend",
+  "description": "frontend of the MINT - 2015 brochure for Leizig",
+  "main": "server.js",
+  "authors": [
+    "Alrik Hausdorf"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.7",
+    "angular-bootstrap": "~0.14.3",
+    "font-awesome": "~4.5.0",
+    "angular-route": "~1.4.8",
+    "angular-resource": "~1.4.8",
+    "angular-loading-bar": "~0.8.0",
+    "angular-animate": "~1.4.8",
+    "ngmap": "~1.15.4",
+    "angular-local-storage": "~0.2.3"
+  }
+}

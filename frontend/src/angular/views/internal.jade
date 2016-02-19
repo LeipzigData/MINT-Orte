@@ -1,0 +1,201 @@
+
+h1 MINT-Orte in Leipzig (Internal-Page)  
+uib-tabset
+	uib-tab(heading="DatenAnsicht")
+		h3 Daten:
+		table.table.table-bordered
+			
+			thead
+				tr
+					th(rowspan="2") Node
+					th(rowspan="2") ID
+					th(colspan="10") Basis
+					th(colspan="2") Ort
+					th(colspan="4") Adress
+					th(colspan="2") hasAngebote
+					th(colspan="2") hasSchwerpunkte
+					th(rowspan="2" ) Data
+				tr
+					th(uib-tooltip="Kurzinformation" tooltip-append-to-body="true") K
+					th(uib-tooltip="Leistungsangebot" tooltip-append-to-body="true") L
+					th(uib-tooltip="Telefon" tooltip-append-to-body="true") T
+					th(uib-tooltip="Fax" tooltip-append-to-body="true"): i.fa.fa-fax
+					th(uib-tooltip="Mail" tooltip-append-to-body="true"): i.fa.fa-at
+					th(uib-tooltip="Internet" tooltip-append-to-body="true"): i.fa.fa-globe
+					th(uib-tooltip="Oeffnungszeiten" tooltip-append-to-body="true") Ö
+					th(uib-tooltip="ÖPNV-Anbindung" tooltip-append-to-body="true") ÖPNV
+					th(uib-tooltip="Bild" tooltip-append-to-body="true"): i.fa.fa-picture-o
+					th(uib-tooltip="Logo" tooltip-append-to-body="true"): i.fa.fa-file-image-o
+					th(uib-tooltip="Exist" tooltip-append-to-body="true") !
+					th(uib-tooltip="hasAddress" tooltip-append-to-body="true"): i.fa.fa-map-marker 
+					th(uib-tooltip="Stadtteil" tooltip-append-to-body="true") St
+					th(uib-tooltip="Adresslabel" tooltip-append-to-body="true") 
+					th(uib-tooltip="wgs84_pos#lat" tooltip-append-to-body="true"): i.fa.fa-location-arrow
+					th(uib-tooltip="wgs84_pos#long" tooltip-append-to-body="true"): i.fa.fa-location-arrow
+					th(uib-tooltip="Angebote Anzahl" tooltip-append-to-body="true" style="width: 69px;") &sum;
+					th(uib-tooltip="Angebote " tooltip-append-to-body="true" ): i.fa.fa-table
+					th(uib-tooltip="Schwerpunkte Anzahl" tooltip-append-to-body="true" style="width: 69px;") &sum;
+					th(uib-tooltip="Schwerpunkte " tooltip-append-to-body="true" ): i.fa.fa-table
+					
+					
+			tbody
+				tr(ng-repeat="(key,element) in RawData track by element.id")
+					td(ng-bind="key")
+					td: a(ng-bind="element._shortId" href="#/p/{{element._shortId}}" )
+					td(ng-style="{'background-color': ((!element.Kurzinformation.length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element.Kurzinformation.length>0")
+						i.fa.fa-times(ng-hide="element.Kurzinformation.length>0")
+						
+					td(ng-style="{'background-color': ((!element.Leistungsangebot.length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element.Leistungsangebot.length>0")
+						i.fa.fa-times(ng-hide="element.Leistungsangebot.length>0")
+						
+					td(ng-style="{'background-color': ((!element.Telefon.length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element.Telefon.length>0")
+						i.fa.fa-times(ng-hide="element.Telefon.length>0")
+						
+					td(ng-style="{'background-color': ((!element.Fax.length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element.Fax.length>0")
+						i.fa.fa-times(ng-hide="element.Fax.length>0")
+						
+					td(ng-style="{'background-color': ((!element.Mail.length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element.Mail.length>0")
+						i.fa.fa-times(ng-hide="element.Mail.length>0")
+						
+					td(ng-style="{'background-color': ((!element.Internet.length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element.Internet.length>0")
+						i.fa.fa-times(ng-hide="element.Internet.length>0")
+						
+					td(ng-style="{'background-color': ((!element['Oeffnungszeiten'].length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element['Oeffnungszeiten'].length>0")
+						i.fa.fa-times(ng-hide="element['Oeffnungszeiten'].length>0")
+						
+					td(ng-style="{'background-color': ((!element['OePNV-Anbindung'].length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element['OePNV-Anbindung'].length>0")
+						i.fa.fa-times(ng-hide="element['OePNV-Anbindung'].length>0")
+						
+					td(ng-style="{'background-color': ((!element['hasImage'].length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element['hasImage'].length>0")
+						i.fa.fa-times(ng-hide="element['hasImage'].length>0")
+						
+					td(ng-style="{'background-color': ((!element['hasLogo'].length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element['hasLogo'].length>0")
+						i.fa.fa-times(ng-hide="element['hasLogo'].length>0")
+						
+					td(ng-style="{'background-color': ((!element['Ort']) ?'red':'')};")
+						i.fa.fa-check(ng-show="element['Ort']")
+						i.fa.fa-times(ng-hide="element['Ort']")
+						
+					td(ng-style="{'background-color': ((!element['Ort'].hasAddress) ?'red':'')};")
+						i.fa.fa-check(ng-show="element['Ort'].hasAddress")
+						i.fa.fa-times(ng-hide="element['Ort'].hasAddress")
+						
+					td(ng-style="{'background-color': ((!element['Ort'].hasAddress.stadtteil) ?'red':'')};")
+						i.fa.fa-check(ng-show="element['Ort'].hasAddress.stadtteil")
+						i.fa.fa-times(ng-hide="element['Ort'].hasAddress.stadtteil")
+						
+					td(ng-style="{'background-color': ((!element['Ort'].hasAddress._label) ?'red':'')};")
+						i.fa.fa-check(ng-show="element['Ort'].hasAddress._label")
+						i.fa.fa-times(ng-hide="element['Ort'].hasAddress._label")
+						
+					td(ng-style="{'background-color': ((!element['Ort'].hasAddress['wgs84_pos#lat']) ?'red':'')};")
+						i.fa.fa-check(ng-show="element['Ort'].hasAddress['wgs84_pos#lat']")
+						i.fa.fa-times(ng-hide="element['Ort'].hasAddress['wgs84_pos#lat']")
+						
+					td(ng-style="{'background-color': ((!element['Ort'].hasAddress['wgs84_pos#long']) ?'red':'')};")
+						i.fa.fa-check(ng-show="element['Ort'].hasAddress['wgs84_pos#long']")
+						i.fa.fa-times(ng-hide="element['Ort'].hasAddress['wgs84_pos#long']")
+						
+					td(ng-style="{'background-color': ((!element.hasAngebote.length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element.hasAngebote") 
+						span(ng-show="element.hasAngebote") {{element.hasAngebote.length}}
+						i.fa.fa-times(ng-hide="element.hasAngebote")
+						|  
+						a.btn.btn-default.btn-xs.pull-right(ng-click="show[element._shortId]=!show[element._shortId]") +
+						
+					td
+						table.table.table-striped(ng-show="element.hasAngebote && show[element._shortId]" style="min-width: 300px;")
+							thead: tr
+								th(uib-tooltip="elements" tooltip-append-to-body="true") &sum;
+								th(uib-tooltip="Lernziele" tooltip-append-to-body="true"): i.fa.fa-bullseye
+								th(uib-tooltip="Zielgruppen" tooltip-append-to-body="true"): i.fa.fa-dot-circle-o
+								th(uib-tooltip="Kosten" tooltip-append-to-body="true") € 
+								th(uib-tooltip="Veranstaltungsort" tooltip-append-to-body="true"): i.fa.fa-map-marker 
+								th(uib-tooltip="Hinweise" tooltip-append-to-body="true"): i.fa.fa-exclamation-triangle
+								th(uib-tooltip="Laufzeit" tooltip-append-to-body="true"): i.fa.fa-clock-o
+								th(uib-tooltip="Tags" tooltip-append-to-body="true"): i.fa.fa-tags
+								
+							tbody
+								tr(ng-repeat="angebot in element.hasAngebote")
+									td {{countKey(angebot).length}}
+									td(ng-style="{'background-color': ((!angebot.Lernziele.length>0) ?'red':'')};")
+										i.fa.fa-check(ng-show="angebot.Lernziele.length>0")
+										i.fa.fa-times(ng-hide="angebot.Lernziele.length>0")
+									td(ng-style="{'background-color': ((!angebot.Zielgruppen.length>0) ?'red':'')};")
+										i.fa.fa-check(ng-show="angebot.Zielgruppen.length>0")
+										i.fa.fa-times(ng-hide="angebot.Zielgruppen.length>0")
+									td(ng-style="{'background-color': ((!angebot.Kosten.length>0) ?'red':'')};")
+										i.fa.fa-check(ng-show="angebot.Kosten.length>0")
+										i.fa.fa-times(ng-hide="angebot.Kosten.length>0")
+									td(ng-style="{'background-color': ((!angebot.Veranstaltungsort.length>0) ?'red':'')};")
+										i.fa.fa-check(ng-show="angebot.Veranstaltungsort.length>0")
+										i.fa.fa-times(ng-hide="angebot.Veranstaltungsort.length>0")
+									td(ng-style="{'background-color': ((!angebot.Hinweise.length>0) ?'red':'')};")
+										i.fa.fa-check(ng-show="angebot.Hinweise.length>0")
+										i.fa.fa-times(ng-hide="angebot.Hinweise.length>0")
+									td(ng-style="{'background-color': ((!angebot.Laufzeit.length>0) ?'red':'')};")
+										i.fa.fa-check(ng-show="angebot.Laufzeit.length>0")
+										i.fa.fa-times(ng-hide="angebot.Laufzeit.length>0")
+									td(ng-style="{'background-color': ((!angebot.hasTagIds.length>0) ?'red':'')};")
+										i.fa.fa-check(ng-show="angebot.hasTagIds.length>0")
+										i.fa.fa-times(ng-hide="angebot.hasTagIds.length>0")
+										| {{angebot.hasTagIds}}
+									//- td: pre.
+									//- 	{{JSON.stringify(angebot,null,4)}}
+									
+					td(ng-style="{'background-color': ((!element.hasSchwerpunkte.length>0) ?'red':'')};")
+						i.fa.fa-check(ng-show="element.hasSchwerpunkte") 
+						span(ng-show="element.hasSchwerpunkte") {{element.hasSchwerpunkte.length}}
+						i.fa.fa-times(ng-hide="element.hasSchwerpunkte")
+						|  
+						a.btn.btn-default.btn-xs.pull-right(ng-click="showSchwerpunkte[element._shortId]=!showSchwerpunkte[element._shortId]") +
+					td
+						table.table.table-striped(ng-show="element.hasSchwerpunkte.length>0 && showSchwerpunkte[element._shortId]" style="min-width: 300px;")
+							thead: tr
+								th(uib-tooltip="elements" tooltip-append-to-body="true") &sum;
+								th(uib-tooltip="Zielgruppen" tooltip-append-to-body="true"): i.fa.fa-dot-circle-o
+								th(uib-tooltip="Kosten" tooltip-append-to-body="true") € 
+								th(uib-tooltip="Teilnehmerzahl" tooltip-append-to-body="true"): i.fa.fa-users
+								th(uib-tooltip="GTA" tooltip-append-to-body="true") GTA
+								//- th(uib-tooltip="Tags" tooltip-append-to-body="true"): i.fa.fa-tags
+								
+							tbody
+								tr(ng-repeat="schwerpunkt in element.hasSchwerpunkte")
+									td {{countKey(schwerpunkt).length}}
+									td(ng-style="{'background-color': ((!schwerpunkt.Zielgruppen.length>0) ?'red':'')};")
+										i.fa.fa-check(ng-show="schwerpunkt.Zielgruppen.length>0")
+										i.fa.fa-times(ng-hide="schwerpunkt.Zielgruppen.length>0")
+									td(ng-style="{'background-color': ((!schwerpunkt.Kosten.length>0) ?'red':'')};")
+										i.fa.fa-check(ng-show="schwerpunkt.Kosten.length>0")
+										i.fa.fa-times(ng-hide="schwerpunkt.Kosten.length>0")
+									td(ng-style="{'background-color': ((!schwerpunkt.Teilnehmerzahl.length>0) ?'red':'')};")
+										i.fa.fa-check(ng-show="schwerpunkt.Teilnehmerzahl.length>0")
+										i.fa.fa-times(ng-hide="schwerpunkt.Teilnehmerzahl.length>0")
+									td(ng-style="{'background-color': ((!schwerpunkt.GTA.length>0) ?'red':'')};")
+										i.fa.fa-check(ng-show="schwerpunkt.GTA.length>0")
+										i.fa.fa-times(ng-hide="schwerpunkt.GTA.length>0")
+									//- td(ng-style="{'background-color': ((!schwerpunkt.hasTagIds.length>0) ?'red':'')};")
+									//- 	i.fa.fa-check(ng-show="schwerpunkt.hasTagIds.length>0")
+									//- 	i.fa.fa-times(ng-hide="schwerpunkt.hasTagIds.length>0")
+									//- 	| {{schwerpunkt.hasTagIds}}
+									//- td: pre.
+									//- 	{{JSON.stringify(schwerpunkt,null,4)}}
+									//- 
+					td
+						a.btn.btn-default.btn-xs(ng-click="showData[element._shortId]=!showData[element._shortId]") Toggel DataView
+						pre( ng-show="showData[element._shortId]" style="width: 1000px;white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap;white-space: pre-wrap;word-wrap: break-word;").
+							{{JSON.stringify(element,null,4)}}
+	uib-tab(heading="RAWDaten")
+		h3 for Copy:
+		pre(style="white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap;white-space: pre-wrap;word-wrap: break-word;"). 
+			{{RawData}}

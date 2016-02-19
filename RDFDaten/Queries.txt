@@ -1,0 +1,51 @@
+http://leipzig-data.de:8890/sparql
+
+-- Extraktion der Daten aus leipzig-data.de
+
+--- Extraktion der Adress- und Geodaten
+
+PREFIX ld: <http://leipzig-data.de/Data/Model/> 
+PREFIX mint2014: <http://leipzig-data.de/Data/MINT-2014/> 
+construct { ?a ?b ?c .  }
+from <http://leipzig-data.de/Data/MINTBroschuere2014/> 
+from <http://leipzig-data.de/Data/Adressen/> 
+from <http://leipzig-data.de/Data/GeoDaten/> 
+from <http://leipzig-data.de/Data/Orte/> 
+where {
+<http://leipzig-data.de/Data/MINTBroschuere2014/>
+ mint2014:describes ?o .
+ ?o a ld:Ort ; ld:hasAddress ?a . 
+ ?a ?b ?c  .
+}
+
+--- Extraktion der Ortsinformationen, das muss dann nacheditiert werden, um die
+    Informationen auf den Umfang zu reduzieren, der für das Projekt wirklich
+    benötigt wird. 
+
+PREFIX ld: <http://leipzig-data.de/Data/Model/> 
+PREFIX mint2014: <http://leipzig-data.de/Data/MINT-2014/> 
+construct { ?o ?x ?y . }
+from <http://leipzig-data.de/Data/MINTBroschuere2014/>
+from <http://leipzig-data.de/Data/Orte/> 
+where {
+<http://leipzig-data.de/Data/MINTBroschuere2014/>
+ mint2014:describes ?o .
+ ?o a ld:Ort ; ?x ?y . 
+}
+
+------------------------------------------------------
+In lokalem Datastore
+
+-- Untersuchung der Daten auf Vollständigkeit
+
+PREFIX ld: <http://leipzig-data.de/Data/Model/> 
+PREFIX mint2014: <http://leipzig-data.de/Data/MINT-2014/> 
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#> 
+select ?o ?a ?l ?g
+from <http://leipzig-data.de/Data/LeipzigDataExtract/>
+where {
+<http://leipzig-data.de/Data/MINT-2014/Ortsliste> rdfs:member ?o .
+ optional { ?o a ld:Ort ; ld:hasAddress ?a . }
+ optional { ?a rdfs:label ?l . }
+ optional { ?a geosparql:asWKT ?g . }
+} order by ?a

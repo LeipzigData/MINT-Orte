@@ -1,0 +1,1188 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix ld: <http://leipzig-data.de/Data/Model/> .
+@prefix ldo: <http://leipzig-data.de/Data/Ort/> .
+@prefix ldot: <http://leipzig-data.de/Data/Ortsteil/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geonames: <http://www.geonames.org/ontology#> .
+
+<http://leipzig-data.de/Data/01277.Dresden.TolkewitzerStrasse.32>
+    ld:hasCity "Dresden" ;
+    ld:hasHouseNumber "32" ;
+    ld:hasPostCode "01277" ;
+    geosparql:asWKT "Point(13.8089196 51.0472279)" ;
+    a ld:Adresse ;
+    rdfs:label "01277 Dresden, Tolkewitzer Straße 32" ;
+    geo:lat 51.0472279 ;
+    geo:long 13.8089196 .
+
+<http://leipzig-data.de/Data/04103.Leipzig.DeutscherPlatz.4>
+    ld:hasHouseNumber "4" ;
+    ld:hasPostCode "04103" ;
+    ld:inOrtsteil ldot:Zentrum-Suedost ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/DeutscherPlatz> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way184958480> ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Deutscher Platz 4" ;
+    geosparql:asWKT "Point(12.3926097 51.3220018)" ;
+    geo:lat  51.3220018 ; 
+    geo:long 12.3926097 .
+
+<http://leipzig-data.de/Data/04103.Leipzig.Inselstrasse.22>
+    ld:hasHouseNumber "22" ;
+    ld:hasPostCode "04103" ;
+    ld:inOrtsteil ldot:Zentrum-Ost ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Inselstrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/node1673864745> ;
+    geosparql:asWKT "Point(12.3911564 51.3412253)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Inselstraße 22" ;
+    geo:lat 51.3412253 ;
+    geo:long 12.3911564 .
+
+<http://leipzig-data.de/Data/04103.Leipzig.Johannisallee.19>
+    ld:hasHouseNumber "19" ;
+    ld:hasPostCode "04103" ;
+    ld:inOrtsteil ldot:Zentrum-Suedost ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Johannisallee> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way31977212> ;
+    geosparql:asWKT "Point(12.3945466888596 51.331576525367)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Johannisallee 19" ;
+    geo:lat 51.331576525367 ;
+    geo:long 12.3945466888596 .
+
+<http://leipzig-data.de/Data/04103.Leipzig.Linnestrasse.5>
+    ld:hasHouseNumber "5" ;
+    ld:hasPostCode "04103" ;
+    ld:inOrtsteil ldot:Zentrum-Suedost ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Linnestrasse> ;
+    geosparql:asWKT "Point(12.3907782 51.3267815)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Linnéstraße 5" ;
+    geo:lat 51.3267815 ;
+    geo:long 12.3907782 .
+
+<http://leipzig-data.de/Data/04105.Leipzig.Loehrstrasse.3>
+    ld:hasHouseNumber "3" ;
+    ld:hasPostCode "04105" ;
+    ld:inOrtsteil ldot:Zentrum-Nord ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Loehrstrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way32459506> ;
+    geosparql:asWKT "Point(12.373093792439 51.3452209871432)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Löhrstraße 3" ;
+    geo:lat 51.3452209871432 ;
+    geo:long 12.373093792439 .
+
+<http://leipzig-data.de/Data/04105.Leipzig.Lortzingstrasse.3>
+    ld:hasHouseNumber "3" ;
+    ld:hasPostCode "04105" ;
+    ld:inOrtsteil ldot:Zentrum-Nordwest ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Lortzingstrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way51499006> ;
+    geosparql:asWKT "Point(12.3708558022852 51.3449840539751)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Lortzingstraße 3" ;
+    geo:lat 51.3449840539751 ;
+    geo:long 12.3708558022852 .
+
+<http://leipzig-data.de/Data/04105.Leipzig.PfaffendorferStrasse.29>
+    ld:hasHouseNumber "29" ;
+    ld:hasPostCode "04105" ;
+    ld:inOrtsteil ldot:Zentrum-Nord ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/PfaffendorferStrasse> ;
+    geosparql:asWKT "Point(12.3689185 51.3516682)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Pfaffendorfer Straße 29" ;
+    geo:lat 51.3516682 ;
+    geo:long 12.3689185 .
+
+<http://leipzig-data.de/Data/04107.Leipzig.Peterssteinweg.18>
+    ld:hasHouseNumber "18" ;
+    ld:hasPostCode "04107" ;
+    ld:inOrtsteil ldot:Zentrum-Sued ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Peterssteinweg> ;
+    geosparql:asWKT "Point(12.3734866 51.3319033)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Peterssteinweg 18" ;
+    geo:lat 51.3319033 ;
+    geo:long 12.3734866 .
+
+<http://leipzig-data.de/Data/04109.Leipzig.Augustusplatz.10>
+    ld:hasHouseNumber "10" ;
+    ld:hasPostCode "04109" ;
+    ld:inOrtsteil ldot:Zentrum ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Augustusplatz> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/node1797676820> ;
+    geosparql:asWKT "Point(12.3794636 51.3385309)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Augustusplatz 10" ;
+    geo:lat 51.3385309 ;
+    geo:long 12.3794636 .
+
+<http://leipzig-data.de/Data/04109.Leipzig.Elsterstrasse.33>
+    ld:hasHouseNumber "33" ;
+    ld:hasPostCode "04109" ;
+    ld:inOrtsteil ldot:Zentrum-West ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Elsterstrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way96921843> ;
+    geosparql:asWKT "Point(12.363932345946 51.3401502021767)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Elsterstraße 33" ;
+    geo:lat 51.3401502021767 ;
+    geo:long 12.363932345946 .
+
+<http://leipzig-data.de/Data/04109.Leipzig.Goerdelerring.5>
+    ld:hasHouseNumber "5" ;
+    ld:hasPostCode "04109" ;
+    ld:inOrtsteil ldot:Zentrum-West ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Goerdelerring> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/node1676326356> ;
+    geosparql:asWKT "Point(12.3691018 51.3432431)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Goerdelerring 5" ;
+    geo:lat 51.3432431 ;
+    geo:long 12.3691018 .
+
+<http://leipzig-data.de/Data/04155.Leipzig.Elsbethstrasse.2>
+    ld:hasHouseNumber "2" ;
+    ld:hasPostCode "04155" ;
+    ld:inOrtsteil ldot:Gohlis-Sued ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Elsbethstrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way10951304> ;
+    geosparql:asWKT "Point(12.3657069 51.3634368)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Elsbethstraße 2" ;
+    geo:lat 51.3634368 ;
+    geo:long 12.3657069 .
+
+<http://leipzig-data.de/Data/04158.Leipzig.DelitzscherLandstrasse.38>
+    ld:hasHouseNumber "38" ;
+    ld:hasPostCode "04158" ;
+    ld:inOrtsteil ldot:Wiederitzsch ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/DelitzscherLandstrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way103019683> ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Delitzscher Landstraße 38" ;
+    geosparql:asWKT "Point(12.3758358 51.391768)" ;
+    geo:lat 51.391768 ;
+    geo:long 12.3758358 .
+
+<http://leipzig-data.de/Data/04158.Leipzig.Steinweg.3>
+    ld:hasHouseNumber "3" ;
+    ld:hasPostCode "04158" ;
+    ld:inOrtsteil ldot:Wiederitzsch ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Steinweg> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way36846950> ;
+    geosparql:asWKT "Point(12.3840311 51.3986855)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Steinweg 3" ;
+    geo:lat 51.3986855 ;
+    geo:long 12.3840311 .
+
+<http://leipzig-data.de/Data/04159.Leipzig.Schlossweg.11>
+    ld:hasHouseNumber "11" ;
+    ld:hasPostCode "04159" ;
+    ld:inOrtsteil ldot:Luetzschena-Stahmeln ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Schlossweg> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way97101007> ;
+    geosparql:asWKT "Point(12.2805680562227 51.3773001962721)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Schloßweg 11" ;
+    geo:lat 51.3773001962721 ;
+    geo:long 12.2805680562227 .
+
+<http://leipzig-data.de/Data/04177.Leipzig.Spittastrasse.16>
+    ld:hasHouseNumber "16" ;
+    ld:hasPostCode "04177" ;
+    ld:inOrtsteil ldot:Altlindenau ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Spittastrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/node2077638538> ;
+    geosparql:asWKT "Point(12.3255976 51.3406343)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Spittastraße 16" ;
+    geo:lat 51.3406343 ;
+    geo:long 12.3255976 .
+
+<http://leipzig-data.de/Data/04179.Leipzig.Plautstrasse.80>
+    ld:hasHouseNumber "80" ;
+    ld:hasPostCode "04179" ;
+    ld:inOrtsteil ldot:Schoenau ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Plautstrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way57371462> ;
+    geosparql:asWKT "Point(12.2986967372773 51.3352819888215)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Plautstraße 80" ;
+    geo:lat 51.3352819888215 ;
+    geo:long 12.2986967372773 .
+
+<http://leipzig-data.de/Data/04207.Leipzig.SchoenauerStrasse.113>
+    ld:hasHouseNumber "113" ;
+    ld:hasPostCode "04207" ;
+    ld:inOrtsteil ldot:Grosszschocher ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/SchoenauerStrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way23162697> ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Schönauer Straße 113" ;
+    geosparql:asWKT "Point(12.3072113 51.3104833)" ;
+    geo:lat 51.3104833 ;
+    geo:long 12.3072113 .
+
+<http://leipzig-data.de/Data/04229.Leipzig.Karl-Heine-Strasse.97>
+    ld:hasHouseNumber "97" ;
+    ld:hasPostCode "04229" ;
+    ld:inOrtsteil ldot:Plagwitz ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Karl-Heine-Strasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way24261214> ;
+    geosparql:asWKT "Point(12.3291511777409 51.3298632866459)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Karl-Heine-Straße 97" ;
+    geo:lat 51.3298632866459 ;
+    geo:long 12.3291511777409 .
+
+<http://leipzig-data.de/Data/04275.Leipzig.SchleussigerWeg.1>
+    ld:hasHouseNumber "1" ;
+    ld:hasPostCode "04275" ;
+    ld:inOrtsteil ldot:Connewitz ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/SchleussigerWeg> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way164854686> ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Schleußiger Weg 1" ;
+    geosparql:asWKT "Point(12.3568253 51.3208805)" ;
+    geo:lat 51.3208805 ;
+    geo:long 12.3568253 .
+
+<http://leipzig-data.de/Data/04277.Leipzig.Bernhard-Goering-Strasse.152>
+    ld:hasHouseNumber "152" ;
+    ld:hasPostCode "04277" ;
+    ld:inOrtsteil ldot:Connewitz ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Bernhard-Goering-Strasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/node94847901> ;
+    geosparql:asWKT "Point(12.3762637 51.3108007)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Bernhard-Göring-Straße 152" ;
+    geo:lat 51.3108007 ;
+    geo:long 12.3762637 .
+
+<http://leipzig-data.de/Data/04277.Leipzig.Bernhard-Goering-Strasse.161>
+    ld:hasHouseNumber "161" ;
+    ld:hasPostCode "04277" ;
+    ld:inOrtsteil ldot:Connewitz ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Bernhard-Goering-Strasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way93205316> ;
+    geosparql:asWKT "Point(12.3766755689016 51.309040912204)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Bernhard-Göring-Straße 161" ;
+    geo:lat 51.309040912204 ;
+    geo:long 12.3766755689016 .
+
+<http://leipzig-data.de/Data/04277.Leipzig.Gustav-Freytag-Strasse.43>
+    ld:hasHouseNumber "43" ;
+    ld:hasPostCode "04277" ;
+    ld:inOrtsteil ldot:Connewitz ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Gustav-Freytag-Strasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/node1673864650> ;
+    geosparql:asWKT "Point(12.3760415 51.3128473)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Gustav-Freytag-Straße 43" ;
+    geo:lat 51.3128473 ;
+    geo:long 12.3760415 .
+
+<http://leipzig-data.de/Data/04277.Leipzig.KohrenerStrasse.3>
+    ld:hasHouseNumber "3" ;
+    ld:hasPostCode "04277" ;
+    ld:inOrtsteil ldot:Connewitz ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/KohrenerStrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way100820621> ;
+    geosparql:asWKT "Point(12.38567075 51.30427685)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Kohrener Straße 3" ;
+    geo:lat 51.30427685 ;
+    geo:long 12.38567075 .
+
+<http://leipzig-data.de/Data/04299.Leipzig.Kaerrnerweg.12A>
+    ld:hasHouseNumber "12A" ;
+    ld:hasPostCode "04299" ;
+    ld:inOrtsteil ldot:Stoetteritz ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Kaerrnerweg> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way9262559> ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Kärrnerweg 12A" ;
+    geosparql:asWKT "Point(12.4242248 51.3176838)" ;
+    geo:lat 51.3176838 ;
+    geo:long 12.4242248 .
+
+<http://leipzig-data.de/Data/04315.Leipzig.Lutherstrasse.10>
+    ld:hasHouseNumber "10" ;
+    ld:hasPostCode "04315" ;
+    ld:inOrtsteil ldot:Neustadt-Neuschoenefeld ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Lutherstrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way8566573> ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Lutherstraße 10" ;
+    geosparql:asWKT "Point(12.3935913 51.3448033)" ;
+    geo:lat 51.3448033 ;
+    geo:long 12.3935913 .
+
+<http://leipzig-data.de/Data/04317.Leipzig.PragerStrasse.136>
+    ld:hasHouseNumber "136" ;
+    ld:hasPostCode "04317" ;
+    ld:inOrtsteil ldot:Reudnitz-Thonberg ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/PragerStrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way81707199> ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Prager Straße 136" ;
+    geosparql:asWKT "Point(12.3990909 51.3243047)" ;
+    geo:lat 51.3243047 ;
+    geo:long 12.3990909 .
+
+<http://leipzig-data.de/Data/04318.Leipzig.Permoserstrasse.15>
+    ld:hasHouseNumber "15" ;
+    ld:hasPostCode "04318" ;
+    ld:inOrtsteil ldot:Sellerhausen-Stuenz ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/Permoserstrasse> ;
+    geosparql:asWKT "Point(12.4265913 51.3517333)" ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Permoserstraße 15" ;
+    geo:lat 51.3517333 ;
+    geo:long 12.4265913 .
+
+<http://leipzig-data.de/Data/04319.Leipzig.EngelsdorferStrasse.377>
+    ld:hasHouseNumber "377" ;
+    ld:hasPostCode "04319" ;
+    ld:inOrtsteil ldot:Engelsdorf ;
+    ld:inStreet <http://leipzig-data.de/Data/Strasse/EngelsdorferStrasse> ;
+    geonames:nearbyFeatures <http://linkedgeodata.org/triplify/way77691527> ;
+    a ld:Adresse ;
+    rdfs:label "Leipzig, Engelsdorfer Straße 377" ;
+    geosparql:asWKT "Point(12.486255 51.3424408)" ;
+    geo:lat 51.3424408 ;
+    geo:long 12.486255 .
+
+<http://leipzig-data.de/Data/04416.Markkleeberg.AmFestanger.8>
+    ld:hasCity "Markkleeberg" ;
+    ld:hasHouseNumber "8" ;
+    ld:hasPostCode "04416" ;
+    ld:hasStreet "Am Festanger" ;
+    geosparql:asWKT "Point(12.3774066 51.2795137)" ;
+    a ld:ExterneAdresse ;
+    rdfs:label "04416 Markkleeberg, Am Festanger 8" ;
+    geo:lat 51.2795137 ;
+    geo:long 12.3774066 .
+
+<http://leipzig-data.de/Data/04416.Markkleeberg.Moenchereistrasse.2>
+    ld:hasCity "Markkleeberg" ;
+    ld:hasHouseNumber "2" ;
+    ld:hasPostCode "04416" ;
+    ld:hasStreet "Mönchereistraße" ;
+    geosparql:asWKT "Point(12.3787916 51.2781742)" ;
+    a ld:ExterneAdresse ;
+    rdfs:label "04416 Markkleeberg, Mönchereistraße 2" ;
+    geo:lat 51.2781742 ;
+    geo:long 12.3787916 .
+
+<http://leipzig-data.de/Data/04451.Borsdorf.LeipzigerStrasse.6>
+    ld:hasCity "Borsdorf" ;
+    ld:hasHouseNumber "6" ;
+    ld:hasPostCode "04451" ;
+    geosparql:asWKT "Point(12.5317773 51.3454873)" ;
+    a ld:Adresse ;
+    rdfs:label "04451 Borsdorf, Leipziger Straße 6" ;
+    geo:lat 51.3454873 ;
+    geo:long 12.5317773 .
+
+<http://leipzig-data.de/Data/04463.Grosspoesna.Hauptstrasse.19>
+    ld:hasCity "Großpösna" ;
+    ld:hasHouseNumber "19" ;
+    ld:hasPostCode "04463" ;
+    geosparql:asWKT "Point(12.5010168 51.2706308)" ;
+    a ld:Adresse ;
+    rdfs:label "04463 Großpösna, Hauptstraße 19" ;
+    geo:lat 51.2706308 ;
+    geo:long 12.5010168 .
+
+<http://leipzig-data.de/Data/04463.Grosspoesna.Rittergutshof.7>
+    geosparql:asWKT "Point(12.4616266 51.216831)" ;
+    geo:lat 51.216831 ;
+    geo:long 12.4616266 .
+
+<http://leipzig-data.de/Data/04509.Rabutz.BageritzerWeg.1>
+    ld:hasCity "Rabutz" ;
+    ld:hasHouseNumber "1" ;
+    ld:hasPostCode "04509" ;
+    ld:hasStreet "Bageritzer Weg" ;
+    geosparql:asWKT "Point(12.1677562 51.4448301)" ;
+    a ld:ExterneAdresse ;
+    rdfs:label "04509 Rabutz, Bageritzer Weg 1" ;
+    geo:lat 51.4448301 ;
+    geo:long 12.1677562 .
+
+<http://leipzig-data.de/Data/04838.Jesewitz.ZschettgauerStrasse.3>
+    ld:hasCity "Jesewitz" ;
+    ld:hasHouseNumber "3" ;
+    ld:hasPostCode "04838" ;
+    geosparql:asWKT "Point(12.53954 51.331552)" ;
+    a ld:Adresse ;
+    rdfs:label "04838 Jesewitz, Zschettgauer Straße 3" ;
+    geo:lat 51.331552 ;
+    geo:long 12.53954 .
+
+<http://leipzig-data.de/Data/LeipzigDataExtract/>
+    cc:attributionName "The Leipzig Open Data Project" ;
+    cc:attributionURL <http://leipzig-data.de> ;
+    cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    a owl:Ontology ;
+    rdfs:label "Extract aus Leipzig Data für die MINT-2014 Beschreibungen" .
+
+<http://leipzig-data.de/Data/MINT-2014/Ortsliste>
+    a rdf:Bag ;
+    rdfs:label "Liste der in MINT-2014 referenzierten Orte " ;
+    rdfs:member ldo:ADFC, ldo:AnglerverbandLeipzig, ldo:Auwaldstation, ldo:BA-Leipzig, ldo:BergbauTechnikPark, ldo:BotanischerGartenGrosspoesna, ldo:ComputerSpielSchule, ldo:ENEDAS, ldo:ErfinderKinder, ldo:Garage, ldo:GeoWerkstatt, ldo:GerhardRoeslGmbH, ldo:Greenpeace, ldo:GruenerRing, <http://leipzig-data.de/Data/Ort/HWK.HausKleineForscher>, ldo:HandsOnTechnology, ldo:HfTL, ldo:IHK, ldo:Inspirata, ldo:LSGM, ldo:MPI-MIS, ldo:Naturkundemuseum, ldo:Oekoloewe, ldo:OekoloeweNaturnah, <http://leipzig-data.de/Data/Ort/Oekoschule.Agrapark>, ldo:Phyllodrom, <http://leipzig-data.de/Data/Ort/Rabutz.TOeP>, ldo:ScholaOecologica, <http://leipzig-data.de/Data/Ort/SchulBiologieZentrum.Lehrgarten>, <http://leipzig-data.de/Data/Ort/SchulBiologieZentrum.Zooschule>, ldo:StadtNameLand, ldo:StadtgartenConnewitz, ldo:UFZ, <http://leipzig-data.de/Data/Ort/UFZ.KinderUmweltBus>, ldo:UIZ, ldo:Umspannwerk, ldo:Umweltbibliothek, <http://leipzig-data.de/Data/Ort/UniLeipzig.Physik>, ldo:Vogelschutzlehrstaette, ldo:Volkshochschule, ldo:WildernessInternational, ldo:Wildpark, ldo:ciT .
+
+ld:Ortsteil
+    a owl:Class ;
+    rdfs:label "Ortsteil der Stadt Leipzig" .
+
+ld:Tag
+    a owl:Class ;
+    rdfs:comment "Genormtes Schlagwort zur Klassifizierung" ;
+    rdfs:label "Tag" .
+
+ldo:ADFC
+    ld:hasAddress <http://leipzig-data.de/Data/04107.Leipzig.Peterssteinweg.18> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Allgemeiner Deutscher Fahrrad-Club KV Leipzig e. V. (ADFC)" .
+
+ldo:AnglerverbandLeipzig
+    ld:hasAddress <http://leipzig-data.de/Data/04319.Leipzig.EngelsdorferStrasse.377> ;
+    a ld:Ort ;
+    rdfs:label "Anglerverband Leipzig e. V." .
+
+ldo:Auwaldstation
+    ld:engagedPerson <http://leipzig-data.de/Data/Person/Seidel_Franka> ;
+    ld:hasAddress <http://leipzig-data.de/Data/04159.Leipzig.Schlossweg.11> ;
+    ld:hasEmail "auwaldstation@t-online.de" ;
+    ld:hasFax "0341-2537753" ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/Auwaldstation> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    ld:hasTelefon "0341-4621895" ;
+    ld:hasURL <http://www.auwaldstation.de> ;
+    a ld:Ort ;
+    rdfs:label "Auwaldstation Leipzig" .
+
+ldo:BA-Leipzig
+    ld:contactPerson <http://leipzig-data.de/Data/Person/Schulze_Susanne> ;
+    ld:hasAddress <http://leipzig-data.de/Data/04207.Leipzig.SchoenauerStrasse.113> ;
+    ld:hasEmail "susanne.schulze@ba-leipzig.de" ;
+    ld:hasFax "0341-42743-331" ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/BA-Leipzig> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    ld:hasTelefon "0341-42743-404" ;
+    ld:hasURL <http://www.ba-leipzig.de> ;
+    a ld:Ort ;
+    rdfs:label "Berufsakademie Sachsen, Staatliche Studienakademie Leipzig" .
+
+ldo:BergbauTechnikPark
+    ld:hasAddress <http://leipzig-data.de/Data/04463.Grosspoesna.Hauptstrasse.19> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Bergbau-Technik-Park e.V." .
+
+ldo:BotanischerGartenGrosspoesna
+    ld:hasAddress <http://leipzig-data.de/Data/04463.Grosspoesna.StoermthalerWeg.2> ;
+    a ld:Ort ;
+    rdfs:label "Botanischer Garten für Arznei- und Gewürzpflanzen Großpösna-Oberholz" .
+
+ldo:ComputerSpielSchule
+    ld:hasAddress <http://leipzig-data.de/Data/04155.Leipzig.Elsbethstrasse.2> ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/Medienpaedagogik> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    ld:hasTelefon "0341-9735887", "0341-9735892" ;
+    ld:hasURL <http://www.computerspielschule.org> ;
+    a ld:Ort ;
+    rdfs:comment "Am 21. Juni 2011 fand die feierliche Wiedereröffnung der ComputerSpielSchule Leipzig statt. In ihren neuen Räumlichkeiten im Friedrich-Schiller-Gymnasium heißt es ab sofort wieder: Miteinander spielen! Gemeinsam entdecken! Voneinander lernen!" ;
+    rdfs:label "ComputerSpielSchule Leipzig" .
+
+ldo:ENEDAS
+    ld:hasAddress <http://leipzig-data.de/Data/04109.Leipzig.Elsterstrasse.33> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "ENEDAS e.V. - ENvironmental EDucation And Science Verein zur Förderung der Umweltbildung und Umweltforschung" .
+
+ldo:ErfinderKinder
+    ld:hasAddress <http://leipzig-data.de/Data/04177.Leipzig.Spittastrasse.16> ;
+    a ld:Ort ;
+    rdfs:label "ErfinderKinder" .
+
+ldo:Garage
+    ld:engagedPerson <http://leipzig-data.de/Data/Person/TraegerNestler_Angelika> ;
+    ld:hasAddress <http://leipzig-data.de/Data/04229.Leipzig.Karl-Heine-Strasse.97> ;
+    ld:hasEmail "kontakt@g-a-r-a-g-e.com" ;
+    ld:hasFax "0341-8708610" ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/Garage> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    ld:hasTelefon "0341-870860" ;
+    ld:hasURL <http://www.g-a-r-a-g-e.com> ;
+    a ld:Ort ;
+    rdfs:label "GaraGe - Technologiezentrum für Jugendliche" .
+
+ldo:GeoWerkstatt
+    ld:hasAddress <http://leipzig-data.de/Data/04103.Leipzig.Johannisallee.19> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "GeoWerkstatt Leipzig e.V." .
+
+ldo:GerhardRoeslGmbH
+    ld:hasAddress <http://leipzig-data.de/Data/04838.Jesewitz.ZschettgauerStrasse.3> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Gerhard Rösl GmbH" .
+
+ldo:Greenpeace
+    ld:hasAddress <http://leipzig-data.de/Data/04277.Leipzig.Bernhard-Goering-Strasse.152> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Greenpeace Leipzig" .
+
+ldo:GruenerRing
+    ld:hasAddress <http://leipzig-data.de/Data/04451.Borsdorf.LeipzigerStrasse.6> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Grüner Ring Leipzig (Geschäftsstelle)" .
+
+<http://leipzig-data.de/Data/Ort/HWK.HausKleineForscher>
+    ld:engagedPerson <http://leipzig-data.de/Data/Person/Maennig_Uwe> ;
+    ld:hasAddress <http://leipzig-data.de/Data/04158.Leipzig.Steinweg.3> ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/HWK> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    ld:hasURL <http://www.haus-der-kleinen-forscher.de> ;
+    a ld:Ort ;
+    rdfs:label "Haus der kleinen Forscher" .
+
+ldo:HandsOnTechnology
+    ld:hasAddress <http://leipzig-data.de/Data/04179.Leipzig.Plautstrasse.80> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "HANDS on TECHNOLOGY e. V." .
+
+ldo:HfTL
+    ld:hasAddress <http://leipzig-data.de/Data/04277.Leipzig.Gustav-Freytag-Strasse.43> ;
+    a ld:Ort ;
+    rdfs:label "Hochschule für Telekommunikation Leipzig" .
+
+ldo:IHK
+    ld:hasAddress <http://leipzig-data.de/Data/04109.Leipzig.Goerdelerring.5> ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/IHK> ;
+    ld:hasURL <http://www.leipzig.ihk.de> ;
+    a ld:Ort ;
+    rdfs:label "IHK Leipzig" .
+
+ldo:Inspirata
+    ld:contactPerson <http://leipzig-data.de/Data/Person/Petzschler_Ines> ;
+    ld:engagedPerson <http://leipzig-data.de/Data/Person/Klimesch_Holger>, <http://leipzig-data.de/Data/Person/Koenig_Wolfgang>, <http://leipzig-data.de/Data/Person/Petzschler_Ines> ;
+    ld:hasAddress <http://leipzig-data.de/Data/04103.Leipzig.DeutscherPlatz.4> ;
+    ld:hasEmail "kontakt@inspirata.de" ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/Inspirata> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    ld:hasTelefon "0341-1259757" ;
+    ld:hasURL <http://www.inspirata.de> ;
+    a ld:Ort ;
+    rdfs:label "Inspirata – Zentrum für mathematisch-naturwissenschaftliche Bildung" .
+
+ldo:LSGM
+    ld:Leistungsangebot "Präsenz- und Korrespondenzzirkel, Wochenendseminare und Winterschulen, jährlich ein Mathecamp in den Sommerferien, Stadtrallyes und eine \"Aufgabe des Monats\"" ;
+    ld:engagedPerson <http://leipzig-data.de/Data/Person/Graebe_HansGert>, <http://leipzig-data.de/Data/Person/Schueler_Axel> ;
+    ld:hasAddress <http://leipzig-data.de/Data/04109.Leipzig.Augustusplatz.10> ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/LSGM> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT>, <http://leipzig-data.de/Data/Tag/Mathematik> ;
+    ld:hasTelefon "0341-9732248" ;
+    ld:hasURL <http://www.lsgm.de> ;
+    a ld:Ort ;
+    rdfs:label "Leipziger Schülergesellschaft für Mathematik" .
+
+ldo:MPI-MIS
+    ld:contactPerson <http://leipzig-data.de/Data/Person/Gregor_Jana> ;
+    ld:hasAddress <http://leipzig-data.de/Data/04103.Leipzig.Inselstrasse.22> ;
+    ld:hasEmail "jgregor@mis.mpg.de" ;
+    ld:hasFax "0341-9959658" ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/MPI-MIS> ;
+    ld:hasTelefon "0341-9959650" ;
+    ld:hasURL <http://www.mis.mpg.de> ;
+    a ld:Ort ;
+    rdfs:label "Max-Planck-Institut für Mathematik in den Naturwissenschaften" .
+
+ldo:Naturkundemuseum
+    ld:hasAddress <http://leipzig-data.de/Data/04105.Leipzig.Lortzingstrasse.3> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/Museum> ;
+    ld:hasTelefon "0341-982210" ;
+    ld:hasURL <http://www.leipzig.de/naturkundemuseum> ;
+    a ld:Ort ;
+    rdfs:label "Naturkundemuseum" .
+
+ldo:Oekoloewe
+    ld:hasAddress <http://leipzig-data.de/Data/04277.Leipzig.Bernhard-Goering-Strasse.152> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Ökolöwe - Umweltbund Leipzig e.V." .
+
+ldo:OekoloeweNaturnah
+    ld:hasAddress <http://leipzig-data.de/Data/04277.Leipzig.KohrenerStrasse.3> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Ökolöwe - Umweltbund Leipzig e.V. Leipzig naturnah" .
+
+<http://leipzig-data.de/Data/Ort/Oekoschule.Agrapark>
+    ld:hasAddress <http://leipzig-data.de/Data/04416.Markkleeberg.AmFestanger.8> ;
+    ld:hasEmail "ökoschule-markkleeberg@gmx.de" ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/Umwelt> ;
+    ld:hasTelefon "0341-3504766" ;
+    ld:hasURL <http://www.kultur-und-umweltzentrum.de> ;
+    a ld:Ort ;
+    rdfs:label "agra-Park Ökoschule" .
+
+ldo:Phyllodrom
+    ld:hasAddress <http://leipzig-data.de/Data/04158.Leipzig.DelitzscherLandstrasse.38> ;
+    ld:hasEmail "info@Phyllodrom.de" ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/Umwelt> ;
+    ld:hasTelefon "0341-5257757" ;
+    ld:hasURL <http://wwww.Phyllodrom.de> ;
+    a ld:Ort ;
+    rdfs:label "Phyllodrom e.V. - Museum und Institut für Regenwaldökologie" .
+
+<http://leipzig-data.de/Data/Ort/Rabutz.TOeP>
+    ld:engagedPerson <http://leipzig-data.de/Data/Person/Messerschmidt_Elk> ;
+    ld:hasAddress <http://leipzig-data.de/Data/04509.Rabutz.BageritzerWeg.1> ;
+    ld:hasEmail "info@rennstall-rabutz.de" ;
+    ld:hasFax "034207-73597" ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/Rabutz.TOeP> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    ld:hasTelefon "034207-73595" ;
+    ld:hasURL <http://www.rennstall-rabutz.de> ;
+    a ld:Ort ;
+    rdfs:label "Technisch ökologisches Jugendprojektzentrum Rabutz" .
+
+ldo:ScholaOecologica
+    ld:hasAddress <http://leipzig-data.de/Data/04463.Grosspoesna.Rittergutshof.7> ;
+    a ld:Ort ;
+    rdfs:label "Schola Oecologica" .
+
+<http://leipzig-data.de/Data/Ort/SchulBiologieZentrum.Lehrgarten>
+    ld:hasAddress <http://leipzig-data.de/Data/04275.Leipzig.SchleussigerWeg.1> ;
+    a ld:Ort ;
+    rdfs:label "Botanischer Lehrgarten" .
+
+<http://leipzig-data.de/Data/Ort/SchulBiologieZentrum.Zooschule>
+    ld:hasAddress <http://leipzig-data.de/Data/04105.Leipzig.PfaffendorferStrasse.29> ;
+    a ld:Ort ;
+    rdfs:label "Zooschule im Zoologischen Garten Leipzig" .
+
+ldo:StadtNameLand
+    ld:hasAddress <http://leipzig-data.de/Data/04277.Leipzig.Bernhard-Goering-Strasse.152> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Stadt.Name.Land" .
+
+ldo:StadtgartenConnewitz
+    ld:hasAddress <http://leipzig-data.de/Data/04277.Leipzig.KohrenerStrasse.3> ;
+    a ld:Ort ;
+    rdfs:label "Stadtgarten Connewitz des Ökolöwe - Umweltbund Leipzig e. V." .
+
+ldo:UFZ
+    ld:hasAddress <http://leipzig-data.de/Data/04318.Leipzig.Permoserstrasse.15> ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/UFZ> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/Forschung>, <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Helmholtz-Zentrum für Umweltforschung GmbH – UFZ" .
+
+<http://leipzig-data.de/Data/Ort/UFZ.KinderUmweltBus>
+    ld:hasAddress <http://leipzig-data.de/Data/04318.Leipzig.Permoserstrasse.15> ;
+    ld:hasEmail "kinderumweltbus@ufz.de" ;
+    ld:hasFax "0341-235-3629" ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/UFZ> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT>, <http://leipzig-data.de/Data/Tag/Umwelt> ;
+    ld:hasTelefon "0341-235-3630" ;
+    ld:hasURL <http://www.kinderumweltbus.de> ;
+    a ld:Ort ;
+    rdfs:label "UFZ KinderUmweltBus" .
+
+ldo:UIZ
+    ld:Art "Angebote in den Bereichen Ökologie, Umwelt- und Naturschutz" ;
+    ld:hasAddress <http://leipzig-data.de/Data/04317.Leipzig.PragerStrasse.136> ;
+    ld:hasEmail "UIZ@leipzig.de" ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/StadtLeipzig>, <http://leipzig-data.de/Data/Traeger/UIZ> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    ld:hasTelefon "0341-1236711" ;
+    a ld:Ort ;
+    rdfs:label "Umweltinformationszentrum" .
+
+ldo:Umspannwerk
+    ld:contactPerson <http://leipzig-data.de/Data/Person/Haenisch_Wolfgang>, <http://leipzig-data.de/Data/Person/Raue_Manfred> ;
+    ld:hasAddress <http://leipzig-data.de/Data/04416.Markkleeberg.Moenchereistrasse.2> ;
+    ld:hasEmail "vde-leipzig-halle@vde-online.de" ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/VDE.LeipzigHalle> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    ld:hasTelefon "0341-35022265" ;
+    a ld:Ort ;
+    rdfs:label "Elektrotechnische Sammlung am Umspannwerk Markkleeberg" .
+
+ldo:Umweltbibliothek
+    ld:engagedPerson <http://leipzig-data.de/Data/Person/Quester_Roland> ;
+    ld:hasAddress <http://leipzig-data.de/Data/04277.Leipzig.Bernhard-Goering-Strasse.152> ;
+    ld:hasEmail "info@umweltbibliothek-leipzig.de" ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/Oekoloewe> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    ld:hasTelefon "0341-3065-181, 0341-3065-180" ;
+    ld:hasURL <http://www.umweltbibliothek-leipzig.de>, "http://www.umweltbildung-leipzig.de" ;
+    a ld:Ort ;
+    rdfs:label "Umweltbibliothek Leipzig" .
+
+<http://leipzig-data.de/Data/Ort/UniLeipzig.Physik>
+    ld:hasAddress <http://leipzig-data.de/Data/04103.Leipzig.Linnestrasse.5> ;
+    a ld:Ort ;
+    rdfs:label "Fakultät für Physik und Geowissenschaften der Universität Leipzig" .
+
+ldo:Vogelschutzlehrstaette
+    ld:hasAddress <http://leipzig-data.de/Data/04299.Leipzig.Kaerrnerweg.12A> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Vogelschutzlehrstätte Stadtverband Leipzig der Kleingärtner e.V. (Träger)" .
+
+ldo:Volkshochschule
+    ld:hasAddress <http://leipzig-data.de/Data/04105.Leipzig.Loehrstrasse.3> ;
+    ld:hasEmail "vhs@leipzig.de" ;
+    ld:hasTelefon "0341-1236000" ;
+    ld:hasURL <http://www.vhs-leipzig.de> ;
+    a ld:Ort ;
+    rdfs:label "Volkshochschule" .
+
+ldo:WildernessInternational
+    ld:hasAddress <http://leipzig-data.de/Data/01277.Dresden.TolkewitzerStrasse.32>, <http://leipzig-data.de/Data/04318.Leipzig.Permoserstrasse.15> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Stiftung Wilderness International" .
+
+ldo:Wildpark
+    ld:hasAddress <http://leipzig-data.de/Data/04277.Leipzig.Bernhard-Goering-Strasse.161> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/MINT> ;
+    a ld:Ort ;
+    rdfs:label "Wildpark Verein der Freunde und Förderer des Wildparks Leipzig e.V." .
+
+ldo:ciT
+    ld:contactPerson <http://leipzig-data.de/Data/Person/Hamel_Corinna> ;
+    ld:hasAddress <http://leipzig-data.de/Data/04315.Leipzig.Lutherstrasse.10> ;
+    ld:hasEmail "chamel@mint-individual.de" ;
+    ld:hasFax "0341-68707-124" ;
+    ld:hasSupplier <http://leipzig-data.de/Data/Traeger/ciT> ;
+    ld:hasTag <http://leipzig-data.de/Data/Tag/Berufsbildung>, <http://leipzig-data.de/Data/Tag/MINT> ;
+    ld:hasTelefon "0341-68707-0" ;
+    ld:hasURL <http://www.mint-individual.de> ;
+    a ld:Ort ;
+    rdfs:label "ciT – Consulting Innovation Training GmbH" .
+
+ldot:Althen-Kleinpoesna
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.29> ;
+    a ld:Ortsteil ;
+    rdfs:label "Althen-Kleinpösna" .
+
+ldot:Altlindenau
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.71> ;
+    a ld:Ortsteil ;
+    rdfs:label "Altlindenau" .
+
+ldot:Anger-Crottendorf
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.22> ;
+    a ld:Ortsteil ;
+    rdfs:label "Anger-Crottendorf" .
+
+ldot:Baalsdorf
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.28> ;
+    a ld:Ortsteil ;
+    rdfs:label "Baalsdorf" .
+
+ldot:Boehlitz-Ehrenberg
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.74> ;
+    a ld:Ortsteil ;
+    rdfs:label "Böhlitz-Ehrenberg" .
+
+ldot:Burghausen-Rueckmarsdorf
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.75> ;
+    a ld:Ortsteil ;
+    rdfs:label "Burghausen-Rückmarsdorf" .
+
+ldot:Connewitz
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.41> ;
+    a ld:Ortsteil ;
+    rdfs:label "Connewitz" .
+
+ldot:Doelitz-Doesen
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.44> ;
+    a ld:Ortsteil ;
+    rdfs:label "Dölitz-Dösen" .
+
+ldot:Engelsdorf
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.27> ;
+    a ld:Ortsteil ;
+    rdfs:label "Engelsdorf" .
+
+ldot:Eutritzsch
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.93> ;
+    a ld:Ortsteil ;
+    rdfs:label "Eutritzsch" .
+
+ldot:Gohlis-Mitte
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.91> ;
+    a ld:Ortsteil ;
+    rdfs:label "Gohlis-Mitte" .
+
+ldot:Gohlis-Nord
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.92> ;
+    a ld:Ortsteil ;
+    rdfs:label "Gohlis-Nord" .
+
+ldot:Gohlis-Sued
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.90> ;
+    a ld:Ortsteil ;
+    rdfs:label "Gohlis-Süd" .
+
+ldot:Grosszschocher
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.53> ;
+    a ld:Ortsteil ;
+    rdfs:label "Großzschocher" .
+
+ldot:Gruenau-Mitte
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.62> ;
+    a ld:Ortsteil ;
+    rdfs:label "Grünau-Mitte" .
+
+ldot:Gruenau-Nord
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.65> ;
+    a ld:Ortsteil ;
+    rdfs:label "Grünau-Nord" .
+
+ldot:Gruenau-Ost
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.61> ;
+    a ld:Ortsteil ;
+    rdfs:label "Grünau-Ost" .
+
+ldot:Gruenau-Siedlung
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.63> ;
+    a ld:Ortsteil ;
+    rdfs:label "Grünau-Siedlung" .
+
+ldot:Hartmannsdorf-Knautnaundorf
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.55> ;
+    a ld:Ortsteil ;
+    rdfs:label "Hartmannsdorf-Knautnaundorf" .
+
+ldot:Heiterblick
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.25> ;
+    a ld:Ortsteil ;
+    rdfs:label "Heiterblick" .
+
+ldot:Holzhausen
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.35> ;
+    a ld:Ortsteil ;
+    rdfs:label "Holzhausen" .
+
+ldot:Kleinzschocher
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.52> ;
+    a ld:Ortsteil ;
+    rdfs:label "Kleinzschocher" .
+
+ldot:Knautkleeberg-Knauthain
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.54> ;
+    a ld:Ortsteil ;
+    rdfs:label "Knautkleeberg-Knauthain" .
+
+ldot:Lausen-Gruenau
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.64> ;
+    a ld:Ortsteil ;
+    rdfs:label "Lausen-Grünau" .
+
+ldot:Leutzsch
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.73> ;
+    a ld:Ortsteil ;
+    rdfs:label "Leutzsch" .
+
+ldot:Liebertwolkwitz
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.34> ;
+    a ld:Ortsteil ;
+    rdfs:label "Liebertwolkwitz" .
+
+ldot:Lindenau
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.70> ;
+    a ld:Ortsteil ;
+    rdfs:label "Lindenau" .
+
+ldot:Lindenthal
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.83> ;
+    a ld:Ortsteil ;
+    rdfs:label "Lindenthal" .
+
+ldot:Loessnig
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.43> ;
+    a ld:Ortsteil ;
+    rdfs:label "Lößnig" .
+
+ldot:Luetzschena-Stahmeln
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.82> ;
+    a ld:Ortsteil ;
+    rdfs:label "Lützschena-Stahmeln" .
+
+ldot:Marienbrunn
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.42> ;
+    a ld:Ortsteil ;
+    rdfs:label "Marienbrunn" .
+
+ldot:Meusdorf
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.33> ;
+    a ld:Ortsteil ;
+    rdfs:label "Meusdorf" .
+
+ldot:Miltitz
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.66> ;
+    a ld:Ortsteil ;
+    rdfs:label "Miltitz" .
+
+ldot:Mockau-Nord
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.13> ;
+    a ld:Ortsteil ;
+    rdfs:label "Mockau-Nord" .
+
+ldot:Mockau-Sued
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.12> ;
+    a ld:Ortsteil ;
+    rdfs:label "Mockau-Süd" .
+
+ldot:Moeckern
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.80> ;
+    a ld:Ortsteil ;
+    rdfs:label "Möckern" .
+
+ldot:Moelkau
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.26> ;
+    a ld:Ortsteil ;
+    rdfs:label "Mölkau" .
+
+ldot:Neulindenau
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.72> ;
+    a ld:Ortsteil ;
+    rdfs:label "Neulindenau" .
+
+ldot:Neustadt-Neuschoenefeld
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.20> ;
+    a ld:Ortsteil ;
+    rdfs:label "Neustadt-Neuschönefeld" .
+
+ldot:Paunsdorf
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.24> ;
+    a ld:Ortsteil ;
+    rdfs:label "Paunsdorf" .
+
+ldot:Plagwitz
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.51> ;
+    a ld:Ortsteil ;
+    rdfs:label "Plagwitz" .
+
+ldot:Plaussig-Portitz
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.15> ;
+    a ld:Ortsteil ;
+    rdfs:label "Plaußig-Portitz" .
+
+ldot:Probstheida
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.32> ;
+    a ld:Ortsteil ;
+    rdfs:label "Probstheida" .
+
+ldot:Reudnitz-Thonberg
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.30> ;
+    a ld:Ortsteil ;
+    rdfs:label "Reudnitz-Thonberg" .
+
+ldot:Schleussig
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.50> ;
+    a ld:Ortsteil ;
+    rdfs:label "Schleußig" .
+
+ldot:Schoenau
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.60> ;
+    a ld:Ortsteil ;
+    rdfs:label "Schönau" .
+
+ldot:Schoenefeld-Abtnaundorf
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.10> ;
+    a ld:Ortsteil ;
+    rdfs:label "Schönefeld-Abtnaundorf" .
+
+ldot:Schoenefeld-Ost
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.11> ;
+    a ld:Ortsteil ;
+    rdfs:label "Schönefeld-Ost" .
+
+ldot:Seehausen
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.94> ;
+    a ld:Ortsteil ;
+    rdfs:label "Seehausen" .
+
+ldot:Sellerhausen-Stuenz
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.23> ;
+    a ld:Ortsteil ;
+    rdfs:label "Sellerhausen-Stünz" .
+
+ldot:Stoetteritz
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.31> ;
+    a ld:Ortsteil ;
+    rdfs:label "Stötteritz" .
+
+ldot:Suedvorstadt
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.40> ;
+    a ld:Ortsteil ;
+    rdfs:label "Südvorstadt" .
+
+ldot:Thekla
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.14> ;
+    a ld:Ortsteil ;
+    rdfs:label "Thekla" .
+
+ldot:Volkmarsdorf
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.21> ;
+    a ld:Ortsteil ;
+    rdfs:label "Volkmarsdorf" .
+
+ldot:Wahren
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.81> ;
+    a ld:Ortsteil ;
+    rdfs:label "Wahren" .
+
+ldot:Wiederitzsch
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.95> ;
+    a ld:Ortsteil ;
+    rdfs:label "Wiederitzsch" .
+
+ldot:Zentrum
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.00> ;
+    a ld:Ortsteil ;
+    rdfs:label "Zentrum" .
+
+ldot:Zentrum-Nord
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.06> ;
+    a ld:Ortsteil ;
+    rdfs:label "Zentrum-Nord" .
+
+ldot:Zentrum-Nordwest
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.05> ;
+    a ld:Ortsteil ;
+    rdfs:label "Zentrum-Nordwest" .
+
+ldot:Zentrum-Ost
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.01> ;
+    a ld:Ortsteil ;
+    rdfs:label "Zentrum-Ost" .
+
+ldot:Zentrum-Sued
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.03> ;
+    a ld:Ortsteil ;
+    rdfs:label "Zentrum-Süd" .
+
+ldot:Zentrum-Suedost
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.02> ;
+    a ld:Ortsteil ;
+    rdfs:label "Zentrum-Südost" .
+
+ldot:Zentrum-West
+    ld:hasStadtRef <http://leipzig-data.de/Data/StadtId/Ortsteil.04> ;
+    a ld:Ortsteil ;
+    rdfs:label "Zentrum-West" .
+
+<http://leipzig-data.de/Data/Stadtbezirk/AltWest>
+    ld:containsOrtsteil ldot:Altlindenau, ldot:Boehlitz-Ehrenberg, ldot:Burghausen-Rueckmarsdorf, ldot:Leutzsch, ldot:Lindenau, ldot:Neulindenau ;
+    a ld:Stadtbezirk ;
+    rdfs:label "Stadtbezirk Alt-West" .
+
+<http://leipzig-data.de/Data/Stadtbezirk/Mitte>
+    ld:containsOrtsteil ldot:Zentrum, ldot:Zentrum-Nord, ldot:Zentrum-Nordwest, ldot:Zentrum-Ost, ldot:Zentrum-Sued, ldot:Zentrum-Suedost, ldot:Zentrum-West ;
+    a ld:Stadtbezirk ;
+    rdfs:label "Stadtbezirk Mitte" .
+
+<http://leipzig-data.de/Data/Stadtbezirk/Nord>
+    ld:containsOrtsteil ldot:Eutritzsch, ldot:Gohlis-Mitte, ldot:Gohlis-Nord, ldot:Gohlis-Sued, ldot:Seehausen, ldot:Wiederitzsch ;
+    a ld:Stadtbezirk ;
+    rdfs:label "Stadtbezirk Nord" .
+
+<http://leipzig-data.de/Data/Stadtbezirk/NordOst>
+    ld:containsOrtsteil ldot:Mockau-Nord, ldot:Mockau-Sued, ldot:Plaussig-Portitz, ldot:Schoenefeld-Abtnaundorf, ldot:Schoenefeld-Ost, ldot:Thekla ;
+    a ld:Stadtbezirk ;
+    rdfs:label "Stadtbezirk Nord-Ost" .
+
+<http://leipzig-data.de/Data/Stadtbezirk/NordWest>
+    ld:containsOrtsteil ldot:Lindenthal, ldot:Luetzschena-Stahmeln, ldot:Moeckern, ldot:Wahren ;
+    a ld:Stadtbezirk ;
+    rdfs:label "Stadtbezirk Nord-West" .
+
+<http://leipzig-data.de/Data/Stadtbezirk/Ost>
+    ld:containsOrtsteil ldot:Althen-Kleinpoesna, ldot:Anger-Crottendorf, ldot:Baalsdorf, ldot:Engelsdorf, ldot:Heiterblick, ldot:Moelkau, ldot:Neustadt-Neuschoenefeld, ldot:Paunsdorf, ldot:Sellerhausen-Stuenz, ldot:Volkmarsdorf ;
+    a ld:Stadtbezirk ;
+    rdfs:label "Stadtbezirk Ost" .
+
+<http://leipzig-data.de/Data/Stadtbezirk/Sued>
+    ld:containsOrtsteil ldot:Connewitz, ldot:Doelitz-Doesen, ldot:Loessnig, ldot:Marienbrunn, ldot:Suedvorstadt ;
+    a ld:Stadtbezirk ;
+    rdfs:label "Stadtbezirk Süd" .
+
+<http://leipzig-data.de/Data/Stadtbezirk/SuedOst>
+    ld:containsOrtsteil ldot:Holzhausen, ldot:Liebertwolkwitz, ldot:Meusdorf, ldot:Probstheida, ldot:Reudnitz-Thonberg, ldot:Stoetteritz ;
+    a ld:Stadtbezirk ;
+    rdfs:label "Stadtbezirk Süd-Ost" .
+
+<http://leipzig-data.de/Data/Stadtbezirk/SuedWest>
+    ld:containsOrtsteil ldot:Grosszschocher, ldot:Hartmannsdorf-Knautnaundorf, ldot:Kleinzschocher, ldot:Knautkleeberg-Knauthain, ldot:Plagwitz, ldot:Schleussig ;
+    a ld:Stadtbezirk ;
+    rdfs:label "Stadtbezirk Süd-West" .
+
+<http://leipzig-data.de/Data/Stadtbezirk/West>
+    ld:containsOrtsteil ldot:Gruenau-Mitte, ldot:Gruenau-Nord, ldot:Gruenau-Ost, ldot:Gruenau-Siedlung, ldot:Lausen-Gruenau, ldot:Miltitz, ldot:Schoenau ;
+    a ld:Stadtbezirk ;
+    rdfs:label "Stadtbezirk West" .
+
+<http://leipzig-data.de/Data/Tag/BehiGe>
+    a ld:Tag ;
+    rdfs:label "Behindertengerecht" .
+
+<http://leipzig-data.de/Data/Tag/Berufsorientierung>
+    a ld:Tag ;
+    rdfs:label "Berufsorientierung" .
+
+<http://leipzig-data.de/Data/Tag/EinBehiGe>
+    a ld:Tag ;
+    rdfs:label "Eingeschränkt Behindertengerecht" .
+
+<http://leipzig-data.de/Data/Tag/GTA>
+    a ld:Tag ;
+    rdfs:label "Ganztagsangebot möglich" .
+
+<http://leipzig-data.de/Data/Tag/Informatik>
+    a ld:Tag ;
+    rdfs:label "Bereich Informatik" .
+
+<http://leipzig-data.de/Data/Tag/Mathematik>
+    a ld:Tag ;
+    rdfs:label "Bereich Mathematik" .
+
+<http://leipzig-data.de/Data/Tag/Naturwissenschaft>
+    a ld:Tag ;
+    rdfs:label "Bereich Naturwissenschaft" .
+
+<http://leipzig-data.de/Data/Tag/Technik>
+    a ld:Tag ;
+    rdfs:label "Bereich Technik" .
+
+<http://leipzig-data.de/Data/Tag/Umweltbildung>
+    a ld:Tag ;
+    rdfs:label "Umweltbildung" .
+
